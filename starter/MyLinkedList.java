@@ -88,6 +88,7 @@ public class MyLinkedList<E> implements MyReverseList<E>{
      * Constructor to create an empty Doubly linked list
      */
     public MyLinkedList(E[] arr) {
+
         //Create dummy nodes
         head = new Node(null);
         tail = new Node(null);
@@ -95,19 +96,21 @@ public class MyLinkedList<E> implements MyReverseList<E>{
         tail.setPrev(head);
         size = 0;	
 
-        //create list by inserting each element
-        Node currNode = head;
-        for(int i=0; i<arr.length; i++){
-            Node newNode = new Node(arr[i]);
-            currNode.next.prev = newNode;
-            newNode.next = currNode.next;
-            newNode.prev = currNode;
-            currNode.next = newNode;
+        if(arr != null){
+            //create list by inserting each element
+            Node currNode = head;
+            for(int i=0; i<arr.length; i++){
+                Node newNode = new Node(arr[i]);
+                currNode.next.prev = newNode;
+                newNode.next = currNode.next;
+                newNode.prev = currNode;
+                currNode.next = newNode;
 
-            //move pointer to the next node
-            currNode = currNode.next;
-            //increase size of list
-            this.size++;
+                //move pointer to the next node
+                currNode = currNode.next;
+                //increase size of list
+                this.size++;
+            }
         }
     }
 
