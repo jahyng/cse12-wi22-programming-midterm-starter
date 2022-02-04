@@ -11,7 +11,6 @@
  */
 public class MyArrayList<E> implements MyReverseList<E> {
     static final int DEFAULT_CAPACITY = 5;
-    static final String ILLEGAL_CAPACITY_FMT = "Illegal Capacity: %d";
     
     Object[] data;
     int size;
