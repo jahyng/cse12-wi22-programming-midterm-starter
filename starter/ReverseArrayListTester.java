@@ -2,9 +2,14 @@
  * Tests to check the implementation of reverseRegion method in MyArrayList.java
 */
 
-//import statements
+//other import statements
 
 import org.junit.*;
+
+//IMPORTANT: DO NOT MODIFY THE TEST HEADERS!
+/**
+ * This class contains various test cases to test the reverseRegion method
+ */
 public class ReverseArrayListTester {
 
     /**

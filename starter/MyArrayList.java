@@ -16,6 +16,8 @@ public class MyArrayList<E> implements MyReverseList<E> {
     Object[] data;
     int size;
 
+    //IMPORTANT: DO NOT MODIFY THIS CONSTRUCTOR!
+    //IMPORTANT: DO NOT ADD ANY MORE CONSTRUCTORS!
 
     /**
      * Constructor to create an array list with the given array's elements

@@ -4,6 +4,8 @@
  * by MyArrayList and MyLinkedList classes. 
  */
 
+//IMPORTANT: DO NOT MODIFY THIS INTERFACE
+
 /**
  * An interface that contains the methods used to 
  * reverse a given region in a list.

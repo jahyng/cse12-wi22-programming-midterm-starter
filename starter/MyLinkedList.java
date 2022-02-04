@@ -84,8 +84,12 @@ public class MyLinkedList<E> implements MyReverseList<E>{
         } 
     }
 
+    //IMPORTANT: DO NOT MODIFY THIS CONSTRUCTOR!
+    //IMPORTANT: DO NOT ADD ANY MORE CONSTRUCTORS!
     /**
-     * Constructor to create an empty Doubly linked list
+     * Constructor to create a doubly linked list 
+     * with the argument array's elements
+     * @param arr - array of elements to be used to construct the LinkedList
      */
     public MyLinkedList(E[] arr) {
 
