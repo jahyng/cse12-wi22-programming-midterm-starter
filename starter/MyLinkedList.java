@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 
 /**
  * TODO: Add your file header
@@ -12,18 +13,18 @@
  */
 public class MyLinkedList<E> implements MyReverseList<E>{
 
-	int size;
-	Node head;
-	Node tail;
+    int size;
+    Node head;
+    Node tail;
 
 	/**
      * A Node class that holds data and references to previous and next Nodes
 	 * This class is used for both MyLinkedList and MyListIterator.
      */
-	protected class Node {
-		E data;
-		Node next;
-		Node prev;
+    protected class Node {
+	    E data;
+	    Node next;
+	    Node prev;
 
 		/** 
 		 * Constructor to create singleton Node 
@@ -88,13 +89,28 @@ public class MyLinkedList<E> implements MyReverseList<E>{
 	/**
 	 * Constructor to create an empty Doubly linked list
 	 */
-	public MyLinkedList() {
+	public MyLinkedList(E[] arr) {
 		//Create dummy nodes
 		head = new Node(null);
 		tail = new Node(null);
 		head.setNext(tail);
 		tail.setPrev(head);
 		size = 0;	
+
+		//create list by inserting each element
+		Node currNode = head;
+		for(int i=0; i<arr.length; i++){
+			Node newNode = new Node(arr[i]);
+			currNode.next.prev = newNode;
+			newNode.next = currNode.next;
+			newNode.prev = currNode;
+			currNode.next = newNode;
+
+			//move pointer to the next node
+			currNode = currNode.next;
+			//increase size of list
+			this.size++;
+		}
 	}
 
 
@@ -111,8 +127,24 @@ public class MyLinkedList<E> implements MyReverseList<E>{
 	 * @return - number of elements in the linkedlist
 	*/
 	public int size() {
-		//Return the number of node in the linkedlist
+		//Return the number of nodes in the linkedlist
 		return this.size;
+	}
+
+	@Override
+	/** 
+	 * Get contents at position i
+	 * @param index - The index position to obtain the data
+	 * @return the Element at the specified index
+	 */
+	public E get(int index)	{
+
+		Node currNode = this.getNth(index);
+
+		//Get the value of data at the position
+		E element = currNode.getElement();
+
+		return element;	
 	}
 
 

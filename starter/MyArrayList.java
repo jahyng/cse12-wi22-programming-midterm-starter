@@ -16,25 +16,6 @@ public class MyArrayList<E> implements MyReverseList<E> {
     Object[] data;
     int size;
 
-    /**
-     * Constructor to create an empty array list
-     */
-    public MyArrayList() {
-        data = new Object[DEFAULT_CAPACITY]; 
-    }
-
-    /**
-     * Constructor to create an empty array list with a given capacity
-     * @param initialCapacity - given arraylist capacity
-     */
-    public MyArrayList(int initialCapacity) {
-        if (initialCapacity < 0) {
-            throw new 
-            IllegalArgumentException(String.format(ILLEGAL_CAPACITY_FMT
-                , initialCapacity));
-        }
-        data = new Object[initialCapacity];
-    }
 
     /**
      * Constructor to create an array list with the given array's elements
@@ -58,6 +39,7 @@ public class MyArrayList<E> implements MyReverseList<E> {
         */
     }
 
+    @Override
     /**
      * A method that returns the number of valid elements
      * in the ArrayList 
@@ -67,5 +49,14 @@ public class MyArrayList<E> implements MyReverseList<E> {
         return this.size;
     }
 
-
+    @Override
+    /**
+     * A method that returns an Element at the specified index
+     * @param index - the index of the return Element
+     * @return Element at specified index
+     */
+    @SuppressWarnings("unchecked")
+    public E get(int index) {
+        return (E) data[index];
+    }
 }

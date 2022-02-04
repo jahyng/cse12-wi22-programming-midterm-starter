@@ -16,4 +16,7 @@ public interface MyReverseList<E> {
     /* Reverses the given region in a list*/
     void reverseRegion(int fromIndex, int toIndex);
 
+    /* Gets an element at specified index */
+    E get(int index);
+
 }
