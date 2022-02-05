@@ -22,8 +22,8 @@ public class ReverseArrayListTester {
 
 
     /**
-     * Tests reverseRegion method when
-     * fromIndex and toIndex are out of bounds
+     * Tests reverseRegion method when either fromIndex or toIndex
+     * or both are out of bounds.
      */
     @Test
     public void testReverseIndexOutOfBounds(){
