@@ -123,7 +123,15 @@ public class MyLinkedList<E> implements MyReverseList<E>{
      * TODO: Method header comment here
      */
     public void reverseRegion(int fromIndex, int toIndex){
-        //TODO: Add your solution here
+        if (fromIndex > this.size || toIndex > this.size) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        if (fromIndex < toIndex) {
+            // get the difference of start and end index
+            int diff = toIndex - fromIndex;
+        }
+    
     }
 
     @Override
