@@ -1,8 +1,8 @@
 /**
  * TODO: Add your file header
- * Name:
- * ID:
- * Email:
+ * Name: Josh Yang
+ * ID: A16667394
+ * Email: jwyang@ucsd.edu
  * File description: 
  */
 
@@ -123,13 +123,29 @@ public class MyLinkedList<E> implements MyReverseList<E>{
      * TODO: Method header comment here
      */
     public void reverseRegion(int fromIndex, int toIndex){
-        if (fromIndex > this.size || toIndex > this.size) {
+        if (fromIndex > this.size || toIndex > this.size || fromIndex < 0 
+            || toIndex < 0) {
             throw new IndexOutOfBoundsException();
         }
 
         if (fromIndex < toIndex) {
             // get the difference of start and end index
-            int diff = toIndex - fromIndex;
+            int diff = toIndex - fromIndex + 1;
+            // iterate to the fromIndex
+            for (int i = 0; i < diff / 2; i++) {
+                // refrences to right and left nodes
+                Node rightNode = this.getNth(toIndex - i);
+                Node leftNode = this.getNth(fromIndex + i);
+
+                // create temp element
+                 E tempElem = this.get(fromIndex + i);
+
+                leftNode.setElement(rightNode.getElement());
+                rightNode.setElement(tempElem);
+                
+            }
+
+            
         }
     
     }
