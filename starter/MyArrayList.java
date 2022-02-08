@@ -1,11 +1,9 @@
-import java.util.function.ToIntBiFunction;
-
 /**
- * TODO: Add your file header
  * Name: Josh Yang
  * ID: A16667394 
  * Email: jwyang@ucsd.edu
- * File description: 
+ * File description: File has Array list class with constructor and methods used
+ * for reversal.
  */
 
 /**

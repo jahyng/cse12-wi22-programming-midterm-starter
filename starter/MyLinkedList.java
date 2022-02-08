@@ -1,13 +1,15 @@
 /**
- * TODO: Add your file header
  * Name: Josh Yang
  * ID: A16667394
  * Email: jwyang@ucsd.edu
- * File description: 
+ * File description: File with linked list and node class. Uses these classes 
+ * for the main purpose of reversal
  */
 
 /**
- * TODO: Add class header
+ * Class implements MyReverseList and has subclass Node. Has instance variables
+ * size, head, and tail. Size gives the nimber of elements in the list. Head 
+ * gives the first node of the list. Tail gives the last node of the list.
  */
 public class MyLinkedList<E> implements MyReverseList<E>{
 
