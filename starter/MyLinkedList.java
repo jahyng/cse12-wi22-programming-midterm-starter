@@ -122,7 +122,10 @@ public class MyLinkedList<E> implements MyReverseList<E>{
 
 
     /**
-     * TODO: Method header comment here
+     * Reverses region starting from certain index. Uses setElement() as the 
+     * main way to do so.
+     * @param fromIndex gives starting index
+     * @param toIndex gives ending index
      */
     public void reverseRegion(int fromIndex, int toIndex){
         if (fromIndex > this.size || toIndex > this.size || fromIndex < 0 
