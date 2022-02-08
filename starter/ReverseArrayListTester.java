@@ -149,11 +149,26 @@ public class ReverseArrayListTester {
     }
 
     /**
-     * Custom test
+     * test when the fromIndex and toIndex are equal
     */
     @Test
     public void testReverseCustom(){
-        assertEquals(0, testArrayEmpty.size());
+        // test odd array list
+        testArrayLen5.reverseRegion(2, 2);
+        assertEquals("zero", testArrayLen5.get(0));
+        assertEquals("one", testArrayLen5.get(1));
+        assertEquals("two", testArrayLen5.get(2));
+        assertEquals("three", testArrayLen5.get(3));
+        assertEquals("four", testArrayLen5.get(4));
+
+        // test even array list
+        testArrayLen6.reverseRegion(2, 2);
+        assertEquals(0, testArrayLen6.get(0));
+        assertEquals(1, testArrayLen6.get(1));
+        assertEquals(2, testArrayLen6.get(2));
+        assertEquals(3, testArrayLen6.get(3));
+        assertEquals(4, testArrayLen6.get(4));
+        assertEquals(5, testArrayLen6.get(5));
     }
 
 
