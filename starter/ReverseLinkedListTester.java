@@ -132,9 +132,9 @@ public class ReverseLinkedListTester {
     public void testReverseIndexWithinBounds(){
         // test odd arrayList
         testArrayLen5.reverseRegion(1, 4);
-        for (int i = 0; i < testArrayLen5.size(); i++) {
-            System.out.println(testArrayLen5.get(i));
-        }
+        // for (int i = 0; i < testArrayLen5.size(); i++) {
+        //     System.out.println(testArrayLen5.get(i));
+        // }
         assertEquals("zero", testArrayLen5.get(0));
         assertEquals("four", testArrayLen5.get(1));
         assertEquals("three", testArrayLen5.get(2));  
